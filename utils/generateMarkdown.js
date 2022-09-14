@@ -60,10 +60,23 @@ function renderLicenseSection(license) {
 };
 
 // Table of contents
-function renderTableOfContents() { }
+function renderTableOfContents(data) {
+  let contentsArr = Object.keys(data).filter(section => !section.startsWith('confirm'));
+  contentsArr = contentsArr.slice(1, contentsArr.length-2);
+  const content = contentsArr.map(section => {
+    return `-[${section.toUpperCase()}](#${section})<br>`
+  })
+  return `
+  ## TABLE OF CONTENTS\n
+  ${content.join("")}
+  [QUESTIONS](#questions)
+  `;
+}
 
 // Body of readme
-function renderBody() { }
+function renderBody() {
+  
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
