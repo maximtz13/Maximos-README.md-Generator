@@ -196,10 +196,37 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+function writeToFile(fileName, data) {
+    return new Promise((resolve, reject) => {
+        fs.writeFile(fileName, data, err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve({
+                ok: true,
+                message: 'README created!'
+            });
+        });
+    });
+};
 
 // TODO: Create a function to initialize app
-function init() { }
+function init() {
+    return inquirer.prompt(questions)
+        .then(answers => {
+            return generateMarkdown(answers);
+        })
+        .then(readmeContent => {
+            return writeToFile('./dist/README.md', readmeContent);
+        })
+        .then(writeToFileResponse => {
+            console.log(writeToFileResponse);
+        })
+        .catch(err => {
+            console.log(err);
+        });
+};
 
 // Function call to initialize app
 init();
