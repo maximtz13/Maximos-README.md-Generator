@@ -1,13 +1,21 @@
 {
-  "name": "static-site",
+  "name": "maximos-readme.md-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A code-line based application that generates a professional README by simply only answering a few questions!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maximtz13/Maximos-README.md-Generator.git"
+  },
+  "author": "maximtz13",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maximtz13/Maximos-README.md-Generator/issues"
+  },
+  "homepage": "https://github.com/maximtz13/Maximos-README.md-Generator#readme",
   "dependencies": {
     "inquirer": "^8.2.4"
   }
