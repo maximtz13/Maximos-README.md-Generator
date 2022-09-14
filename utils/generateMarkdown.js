@@ -54,7 +54,7 @@ function renderLicenseSection(license) {
   if (!license) {
     return '';
   } else {
-    return `## LICENSE 
+    return `## LICENSE\n 
   This application is covered under License ${license}.<br>`;
   }
 };
@@ -62,9 +62,9 @@ function renderLicenseSection(license) {
 // Table of contents
 function renderTableOfContents(data) {
   let contentsArr = Object.keys(data).filter(section => !section.startsWith('confirm'));
-  contentsArr = contentsArr.slice(1, contentsArr.length-2);
+  contentsArr = contentsArr.slice(1, contentsArr.length - 2);
   const content = contentsArr.map(section => {
-    return `-[${section.toUpperCase()}](#${section})<br>`
+    return `[${section.toUpperCase()}](#${section})<br>`
   })
   return `
   ## TABLE OF CONTENTS\n
@@ -86,8 +86,22 @@ function renderBody(othersArr, name) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-
+  const { title, description, license, github, email, ...others } = data;
+  return `# ${title}
+  ${renderLicenseBadge(license)}
+  ${renderTableOfContents(data)}
+  ## DESCRIPTION\n
+    ${data.description}
+  ${renderBody(others, 'installation')}
+  ${renderBody(others, 'usage')}
+  ${renderBody(others, 'contribution')}
+  ${renderBody(others, 'test')}
+  ${renderLicenseSection(license)}
+  ${renderLicenseLink(license)}
+  ## QUESTIONS?\n
+  For more applications, please refer to [my GitHub](https://github.com/${github}).<br>
+  For questions, please check usage documentation for reference.<br>
+  If your question is still unsolved, please send it to *${email}* and I will get back to you as soon as possible.
 `;
 }
 
