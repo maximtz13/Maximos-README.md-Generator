@@ -74,8 +74,14 @@ function renderTableOfContents(data) {
 }
 
 // Body of readme
-function renderBody() {
-  
+function renderBody(othersArr, name) {
+  if (!othersArr[name]) {
+    return '';
+  } else {
+    return `## ${name.toUpperCase()}
+    ${othersArr[name]}
+    `;
+  }
 }
 
 // TODO: Create a function to generate markdown for README
