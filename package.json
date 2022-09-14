@@ -1,19 +1,14 @@
 {
-  "name": "maximos-readme.md-generator",
+  "name": "static-site",
   "version": "1.0.0",
-  "description": "An app that can be used to quickly create a professional README for projects!",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maximtz13/Maximos-README.md-Generator.git"
-  },
-  "author": "maximtz13",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/maximtz13/Maximos-README.md-Generator/issues"
-  },
-  "homepage": "https://github.com/maximtz13/Maximos-README.md-Generator#readme"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
