@@ -35,3 +35,6 @@ This application is covered under License ISC.<br>
 For more applications, please refer to [my GitHub](https://github.com/Sample-Username).<br>
 For questions, please check usage documentation for reference.<br>
 If your question is still unsolved, please send it to *sample@email.com* and I will get back to you as soon as possible.
+
+## Photo
+!["Sample Photo"](./assets/imgs/Screenshot%20(18).png)
