@@ -38,3 +38,6 @@ If your question is still unsolved, please send it to *sample@email.com* and I w
 
 ## Photo
 !["Sample Photo"](./assets/imgs/Screenshot%20(18).png)
+
+## Demo Video
+[Click here for demo video](https://drive.google.com/file/d/13jM7rNwWSs-_ohaaB9quRk-oiJuE0BXm/view?usp=sharing)
